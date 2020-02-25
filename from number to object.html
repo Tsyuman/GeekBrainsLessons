@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practice</title>
+</head>
+ 
+<body>
+    <script>
+        'use strict';
+ 
+   //Написать функцию, преобразующую число в объект. Передавая на вход число в диапазоне [0, 999],
+//мы должны получить на выходе объект, в котором в соответствующих свойствах описаны разряды числа:
+//- единицы (в свойстве units)
+//- десятки (в свойстве tens)
+//- сотни (в свойстве hundereds)
+//Например, для числа 45 мы должны получить следующий объект:
+//units: 5, //это единицы
+//tens: 4, //это десятки
+//hundreds: 0, //это сотни
+//Если число было передано вне [0, 999] диапазона, не целое число или вообще не число,
+//необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.
+   
+   
+        let g = prompt('chislo 0 - 999');
+        function xxx(x) {
+            if( !parseInt(x) || x<0 || x>999 ){
+                console.log('ne verno');
+                return x={};
+            }else if ( x=>0 && x<999 ){
+                let j = Array.from(x);
+            switch (x.length) {
+                case 1:
+                    let f = {
+                        ed: j[0],
+                        des: 0,
+                        hudr: 0,
+                    }
+                    console.log(f);
+                    break;
+                case 2:
+                    let m = {
+                        ed: j[1],
+                        des: j[0],
+                        hudr: 0,
+                    }
+                    console.log(m);
+                    break;
+                case 3:
+                    let v = {
+                        ed: j[2],
+                        des: j[1],
+                        hudr: j[0],
+                    }
+                    console.log(v);
+                    break;
+            }
+            }
+        
+ 
+            
+        }
+        xxx(g);
+    </script>
+</body>
+ 
+</html>
